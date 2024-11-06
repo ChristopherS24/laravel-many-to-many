@@ -16,10 +16,10 @@ class TechnologySeeder extends Seeder
     {
         Technology::truncate();
 
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 10; $i++) {
 
             Technology::create([
-                'name' => fake()->words(rand(1.3), true)
+                'name' => fake()->words(rand(1,3), true)
 
             ]);
 
