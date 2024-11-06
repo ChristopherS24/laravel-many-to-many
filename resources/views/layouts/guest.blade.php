@@ -25,10 +25,10 @@
                                     <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link 2</a>
+                                    <a class="nav-link" href="{{ route('projects.index') }}">Projects</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link 3</a>
+                                    <a class="nav-link" href="{{ route('admin.technologies.index') }}">Technology</a>
                                 </li>
                             @else
                                 <li class="nav-item">
