@@ -10,6 +10,13 @@
                     <h1 class="text-center text-info">
                         Progetti
                     </h1>
+
+                    <tr class="text-center">
+                        <td>
+                            <a href=" {{ route('projects.create') }} ">Crea nuovo</a>
+                        </td>
+                    </tr>
+
                     <table class="table">
                         <thead>
                           <tr>
@@ -28,6 +35,7 @@
                               <td> {{ $project->title }} </td>
                               <td> {{ $project->creation_date }} </td>
                               <td> {{ $project->author }} </td>
+                              
                               <td>
                                 <a href=" {{ route('projects.show', $project->id) }} ">Mostra</a>
                                 <a href="#">Modifica</a>
