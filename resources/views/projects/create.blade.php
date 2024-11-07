@@ -17,7 +17,8 @@
 
     <div class="row">
       <div class="col">
-        <form method="post" action="">
+
+        <form method="POST" action=" {{ route('projects.store') }} ">
           @csrf
 
           <div class="mb-3">

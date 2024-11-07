@@ -38,7 +38,7 @@
                               
                               <td>
                                 <a href=" {{ route('projects.show', $project->id) }} ">Mostra</a>
-                                <a href="#">Modifica</a>
+                                <a href=" {{ route('projects.edit', $project->id) }} ">Modifica</a>
                                 <a href="#">Elimina</a>
                               </td>
                             </tr>
