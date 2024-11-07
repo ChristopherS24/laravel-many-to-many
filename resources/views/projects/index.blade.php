@@ -39,7 +39,13 @@
                               <td>
                                 <a href=" {{ route('projects.show', $project->id) }} ">Mostra</a>
                                 <a href=" {{ route('projects.edit', $project->id) }} ">Modifica</a>
-                                <a href="#">Elimina</a>
+                                <form action=" {{ route('projects.destroy', $project->id) }} " method="post">
+                                  @csrf
+                                  @method('DELETE')
+
+                                  <button type="submit" class="btn btn-danger">Elimina</button>
+
+                                </form>
                               </td>
                             </tr>
                           @endforeach
