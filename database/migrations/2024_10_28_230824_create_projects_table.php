@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->date('creation_date')->nullable();
             $table->string('author');
+
+            $table->string('cover')->nullable();
+
             $table->timestamps();
         });
     }

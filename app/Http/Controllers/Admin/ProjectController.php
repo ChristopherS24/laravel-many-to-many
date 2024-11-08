@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\Storage; 
+
 class ProjectController extends Controller
 {
     /**
@@ -35,9 +37,15 @@ class ProjectController extends Controller
         $data = $request->all();
 
         $newProject = new Project;
+
+        // $image = Storage::put('uploads', $data['image']);
+
         $newProject->title = $data['title'];
         $newProject->creation_date = $data['creation_date'];
         $newProject->author = $data['author'];
+
+        $newProject->cover = Storage::put('uploads', $data['cover']);
+
         $newProject->save();
 
         return redirect()->route('projects.show', $newProject->id);

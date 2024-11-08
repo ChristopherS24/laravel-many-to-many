@@ -24,6 +24,9 @@
                             <th scope="col">Titolo</th>
                             <th scope="col">Data Creazione</th>
                             <th scope="col">Autore</th>
+
+                            <th scope="col">Cover</th>
+                          
                             <th scope="col">Clicca qui sotto:</th>
                           </tr>
                         </thead>
@@ -35,6 +38,8 @@
                               <td> {{ $project->title }} </td>
                               <td> {{ $project->creation_date }} </td>
                               <td> {{ $project->author }} </td>
+
+                              <td> <img src=" {{ asset('storage/' . $project->cover) }} " alt=" {{ $project->title }} " style="width:100px"> </td>
                               
                               <td>
                                 <a href=" {{ route('projects.show', $project->id) }} ">Mostra</a>

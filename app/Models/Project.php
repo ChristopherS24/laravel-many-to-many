@@ -9,7 +9,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'creation_date', 'author'];
+    protected $fillable = ['title', 'creation_date', 'author', 'cover'];
 
     public function technologies(){
         return $this->belongsToMany(Project::class);
